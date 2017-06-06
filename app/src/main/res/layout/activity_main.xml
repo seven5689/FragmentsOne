@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="ir.masoudanis.fragmentsone.MainActivity">
+
+    <Button
+        android:text="Fragment One"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/fragment_one_button"
+        android:onClick="fragmentButtonOneCl"/>
+
+    <Button
+        android:text="Fragment Two"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/fragment_Two_button"
+        android:layout_below="@+id/fragment_one_button"
+        android:onClick="fragmentButtonTwoCl"/>
+
+    <FrameLayout
+        android:id="@+id/frame_layout_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/fragment_Two_button">
+
+        <fragment
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:name="ir.masoudanis.fragmentsone.FragmentClassOne"/>
+
+    </FrameLayout>
+</RelativeLayout>
